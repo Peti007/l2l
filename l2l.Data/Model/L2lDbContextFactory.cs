@@ -9,7 +9,10 @@ namespace l2l.Data.Model
         {
             var builder = new DbContextOptionsBuilder<L2lDbContext>();
 
-            builder.UseSqlite("Data Source-l2l.db;");
+           // builder.UseSqlite("Data Source-l2l.db;");Trusted_Connection=True;
+
+            
+             builder.UseSqlite("Data Source=l2l.db;");
 
             return new L2lDbContext(builder.Options);
         }
